@@ -8,7 +8,6 @@ This repository contains all the code for the LumosLearn Website which is a stud
   - `HTML`
   - `CSS`
   - `Java Script`
-  - `InkScape`
 
 ## 📃Features - planned but currently a work in progress
   - Note taking
