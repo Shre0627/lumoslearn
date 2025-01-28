@@ -5,7 +5,7 @@ body {
     background-color: beige;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
     background-color: rgba(0, 0, 0, 0.89);
     width: 70px; 
@@ -36,19 +36,7 @@ nav {
 }
 
 .tab button:hover {
-    color: green;
-    border-left: none;
-
-}
-
-.tab button:active {
-    color: brown;
-    border-left-color: blue;
-    border-left-width: 10px;
-}
-
-.tab button:link {
-    color: purple;
+    cursor: pointer;
 }
 
 /* icons */
