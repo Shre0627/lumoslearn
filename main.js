@@ -1,0 +1,16 @@
+// functions for display clock
+function currentTime() {
+    const today = new Date();
+    let hour = today.getHours();
+    let mins = today.getMinutes();
+    mins = timeFormat(mins);
+    document.getElementById('txt').innerHTML = hour + ":" + mins; // need to change id name
+    setTimeout(startTime, 1000);
+}
+
+function timeFormat(i) { // formating the display clock to add 0's 
+    if(i < 10) {
+        i = "0" + i // adding 0's infront of the i
+    }
+    return i;
+}
