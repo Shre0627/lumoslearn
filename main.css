@@ -4,8 +4,15 @@ h1 {
 
 /* Body */
 body {
-    background-color: beige;
-    overflow: hidden;
+    background: linear-gradient(45deg, #08785c, #178e74, #8ce3dc, #ccf1f1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 
