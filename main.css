@@ -1,9 +1,13 @@
 h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
+
+/* Body */
 body {
     background-color: beige;
+    overflow: hidden;
 }
+
 
 /* Navigation Bar */
 nav {
@@ -16,6 +20,15 @@ nav {
     padding-bottom: 5px;
 }
 
+/* Within the body */
+.content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation styling */
 .tabs {
     list-style-type: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -45,4 +58,22 @@ nav {
 }
 .icons:hover {
     filter: invert(90%) sepia(100%) saturate(100%) hue-rotate(240deg) brightness(60%);
+}
+
+/* Background Clock Styling*/
+#bg-clock {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw; /* Full Width*/
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    color:black;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    line-height: 100px;
+    z-index: -1; /* Send to back behind nav */
 }

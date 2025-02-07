@@ -4,8 +4,8 @@ function currentTime() {
     let hour = today.getHours();
     let mins = today.getMinutes();
     mins = timeFormat(mins);
-    document.getElementById('txt').innerHTML = hour + ":" + mins; // need to change id name
-    setTimeout(startTime, 1000);
+    document.getElementById('bg-clock').innerHTML = hour + ":" + mins; // need to change id name
+    setTimeout(currentTime, 1000);
 }
 
 function timeFormat(i) { // formating the display clock to add 0's 
@@ -14,3 +14,6 @@ function timeFormat(i) { // formating the display clock to add 0's
     }
     return i;
 }
+
+//Initial call to start clock
+currentTime();
