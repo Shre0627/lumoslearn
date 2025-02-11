@@ -4,9 +4,11 @@
         <meta name="LumosLearn">
         <title>LumosLearn</title>
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="widgets.css">
+        
     </head>
     <body>
-        <script src="main.js"></script>
+        
 
         <!--Nav Bar-->
         <nav>
@@ -24,7 +26,7 @@
                 <!--<a href="https://www.flaticon.com/free-icons/pomodoro" title="pomodoro icons">Pomodoro icons created by nangicon - Flaticon</a>-->
               </tr>
               <tr>
-                <th class="tab"><button><img class="icons" src="icons/checklist.png"></button></th>
+                <th class="tab"><button id="todoButton"><img class="icons" src="icons/checklist.png"></button></th>
               </tr>
               <!--<a href="https://www.flaticon.com/free-icons/tasks" title="tasks icons">Tasks icons created by Graphics Plazza - Flaticon</a>-->
               <tr>
@@ -40,8 +42,20 @@
           <div id="bg-clock"></div>
           <script src="main.js"></script>
           <!--Pop-ups-->
+          <div id="todo" class="widget">
+            <div class="widget-header">
+              <span>To Do</span>
+              <button id="closeTodo">X</button>
+            </div>
+            <div class="widget-content">
+              <button onclick="addTask()">+</button>
+              <input type="text" id="task" placeholder="Add a new task">
+              <ul id="taskList"></ul>
+            </div>
+          </div>
 
           <!-- Upload Background Button-->
         </div>
+        
     </body>
 </html>

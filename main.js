@@ -17,3 +17,14 @@ function timeFormat(i) { // formating the display clock to add 0's
 
 //Initial call to start clock
 currentTime();
+
+//Functions for widgets
+
+
+//Functions for todo
+document.getElementById('todoButton').addEventListener('click', function(){
+    document.getElementById('todo').style.display='block';
+});
+
+
+
