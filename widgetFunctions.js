@@ -5,6 +5,15 @@ if (button) {
     button.addEventListener('click', addTask);
 }
 
+let taskInput = document.getElementById('task');
+if (taskInput) {
+    taskInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTask();  // Trigger addTask function when Enter is pressed
+        }
+    });
+}
+
 //ADD TASKS FOR TODO
 function addTask() {
     console.log("addTask triggered"); // This will help track how many times the function is triggered
