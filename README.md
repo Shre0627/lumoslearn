@@ -8,7 +8,6 @@ This repository contains all the code for the LumosLearn Website which is a stud
       @Shre0627
       @Adnanm05
       @Rania773
-Adnanm05 
   
   ## 📘Tools
   - `HTML`
