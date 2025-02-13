@@ -10,6 +10,7 @@ This repository contains all the code for the LumosLearn Website which is a stud
   - `Java Script`
 
 ## 📃Features - planned but currently a work in progress
+  - Customizable Background
   - Note taking
   - To-do list
   - Pomodoro Timer
@@ -21,6 +22,7 @@ This repository contains all the code for the LumosLearn Website which is a stud
      - Margins
      - Buttons
      - Hover for various attributes
+     - Keyframe Animation
   
   - `HTML` revision
 
@@ -28,4 +30,4 @@ This repository contains all the code for the LumosLearn Website which is a stud
   - 
 
 ## ⬇️ Updates:
- - **version 1.0** - 
+ - **version 1.0** - Webapp, host locally
