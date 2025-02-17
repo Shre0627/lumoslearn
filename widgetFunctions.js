@@ -34,7 +34,14 @@ function addTask() {
     //Complete task
     let complete = document.createElement('input');
     let del = document.createElement('button');
-    del.textContent = 'x';
+    //Style the delete button
+    del.style.backgroundColor = 'red';
+    del.style.border = 'none';
+    del.style.borderRadius = '90%';
+    del.style.color = 'white';
+    del.style.justifyContent = 'center';
+    del.style.alignItems = 'center';
+    del.textContent = ' x ';
     
     complete.setAttribute('type','checkbox'); //add checkbox
     newTask.appendChild(complete); // Checkbox first
