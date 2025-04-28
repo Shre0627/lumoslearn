@@ -1,6 +1,6 @@
 
 //TODO JS
-let button = document.getElementById('addtask');
+let button = document.getElementById('addTask');
 if (button) {
     button.addEventListener('click', addTask);
 }
@@ -30,6 +30,21 @@ function addTask() {
     // Create a new <li> element
     let newTask = document.createElement('li');
     newTask.style.padding = '5px'; //increase padding for task
+
+    // Create a custom checkbox container
+    let customCheckbox = document.createElement('label');
+    customCheckbox.className = 'custom-checkbox';
+
+    //hidden checkbox input
+    let checkboxInput = document.createElement('input');
+    checkboxInput.type = 'checkbox';
+
+    //custom checkmark
+    let checkmark = document.createElement('span');
+    checkmark.className = 'checkmark';
+    customCheckbox.appendChild(checkboxInput);
+    customCheckbox.appendChild(checkmark);
+
     //Create an editable span for the task text
     let taskText = document.createElement('span');
     taskText.textContent = taskValue;
@@ -56,7 +71,7 @@ function addTask() {
     });
 
     //Complete task
-    let complete = document.createElement('input');
+    //let complete = document.createElement('input');
     let del = document.createElement('button');
     let trashIcon = document.createElement('img');
     trashIcon.src = 'icons/trash.png'; // Path to your trash icon
@@ -90,9 +105,10 @@ function addTask() {
     });
     //del.textContent = ' x ';
     
-    complete.setAttribute('type','checkbox'); //add checkbox
-    newTask.appendChild(complete); // Checkbox first
+    //complete.setAttribute('type','checkbox'); //add checkbox
+    //newTask.appendChild(complete); // Checkbox first
     //newTask.appendChild(document.createTextNode(taskValue)); // Task text after, add typed value to new task li element
+    newTask.appendChild(customCheckbox); // Append the custom checkbox
     newTask.appendChild(taskText); // Append the editable span instead of plain text
     newTask.appendChild(del);
 
@@ -101,7 +117,7 @@ function addTask() {
     })
     
 
-    complete.addEventListener('change', function(){
+    checkboxInput.addEventListener('change', function(){
         if (this.checked){
             newTask.style.textDecoration = 'line-through';
         } else {

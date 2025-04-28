@@ -51,7 +51,71 @@ body {
     height: 20px;
     object-fit: contain;
 }
-/* TODO STYLING*/
+
+
+/* TODO WIDGET*/
+
+/* Custom Checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkmark */
+.custom-checkbox .checkmark {
+    height: 16px;
+    width: 16px;
+    background-color: #1f1c1c;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/*Checkmark animation */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #272525;
+    border-color: #272525;
+    transform: scale(1.2);
+}
+
+.custom-checkbox .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Show checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+/* Task Text */
+.custom-checkbox .task-text {
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .task-text {
+    color: #272525;
+}
+/* Todo Styling */
 .todo-widget-content {
     padding: 10px;
     /*display: grid;
