@@ -52,6 +52,9 @@ body {
     object-fit: contain;
 }
 
+.close-widget:hover{
+    background-color: #ccc;
+}
 
 /* TODO WIDGET*/
 
