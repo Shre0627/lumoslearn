@@ -12,7 +12,6 @@
 
         <!--Nav Bar-->
         <nav>
-          
             <table class="tabs">
               <tr>
                 <th class="tab"><button class="open-widget" data-target="notes"><img class="icons" src="icons/sticky-note.png" alt="notes"></button></th>
@@ -47,18 +46,24 @@
           <div id="todo" class="widget">
             <div class="widget-header">
               <span>To-Do</span>
-              <button class="close-widget">x</button>
+              <button class="close-widget"><img id='closeIcon' src="icons/minimize-sign.png" alt="minimize"></button>
             </div>
             <div class="todo-widget-content">
-              <button id="addtask"><img id="addTicon" src="icons/task.png" alt="task">
+              <div id="addTask-container">
+              <button id="addTask"><img id="addTicon" src="icons/task.png" alt="task">
                 <!--https://www.flaticon.com/free-icons/task title task icons Task icons created by Bharat Icons - Flaticon -->
               </button>
               <input id="task" type="text" placeholder="Add a new task">
+              </div>
               <ul id="taskList"></ul>
+              <!--https://www.flaticon.com/free-icons/miscellaneous" Miscellaneous icons created by Graphics Plazza - Flaticon</a>-->
             </div>
           </div>
 
           <!-- Upload Background Button-->
+           <div id="color-picker">
+            
+           </div>
         </div>
         <script src="main.js"></script>
         <script src="widgetFunctions.js"></script>

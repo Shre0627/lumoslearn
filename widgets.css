@@ -21,9 +21,9 @@ body {
 
 .widget-header {
     color:#fff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     user-select: none;
-    font-size: 28px;
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,73 +38,113 @@ body {
     cursor: grabbing;
 }
 
-.todo-widget-content {
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 30px auto;
-    grid-template-rows: auto auto;
-    gap: 10px;
+.close-widget{
+    cursor: pointer;
+    background-color: #fafafa;
+    outline: none;
+    border-radius: 7px;
+    border-color: #fff;
+    border: none;
 }
 
-.close-widget{
-    background-color: #1f1c1c;
-    color: white;
-    outline: none;
-    border-radius: 5px;
-    border-color: #fff;
+.close-widget img{
+    height: 20px;
+    object-fit: contain;
 }
 /* TODO STYLING*/
+.todo-widget-content {
+    padding: 10px;
+    /*display: grid;
+    grid-template-columns: 30px auto;
+    grid-template-rows: auto auto; */
+    display: flex; /* Use flexbox instead of grid */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px;
+
+}
+
+#addTask-container {
+    display: flex;
+    align-items: center; /* Vertically center the button and input */
+    gap: 10px; /* Add spacing between the button and input */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#addTask{
+    flex-shrink: 0;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: white;
+    outline:none;
+    border: none;
+    border-radius: 4px;
+}
+
+#addTask:hover{
+    background-color: #ccc;
+}
+#task{
+    flex-grow: 1;
+    color:#ccc;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #1f1c1c;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+#addTicon {
+    cursor: pointer;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+
 #taskList{
+    width: 100%;
     padding-left: 0;
     margin-left: 0;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     visibility: visible;
     color: white;
+    
 }
 
 #taskList li {
-    display: grid;
-    grid-template-columns: 20px 280px 20px;
-    overflow-wrap: break-word;
-    row-gap: 15px;
-    column-gap: 10px 20px;
+    /*display: grid; */
+    /*grid-template-columns: 20px 280px 20px; */
+    display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: space-between; /* Space out elements*/
+    padding: 5px;
+    /*overflow-wrap: break-word;*/
+    row-gap: 15px;
+    /*column-gap: 10px 20px;*/
     gap: 8px; /* Adds spacing between checkbox and text */
     list-style: none; /* Removes bullet points */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-#task{
-    color:#ccc;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    height: max-content;
-    font-size: 20px;
-    background-color: #1f1c1c;
-    outline: none;
+#taskList li span{
+    flex-grow: 1;
+    margin-right: 10px;
+    word-wrap: break-word;
 }
 
 #task:hover{
     background-color: #272323;
-}
-
-#addTask{
-    width: 18px;
-    height: 18px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: white;
-    background: none;
-    outline:#1f1c1c;
-}
-
-#addTicon {
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
 }
 
