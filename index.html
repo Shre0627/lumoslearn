@@ -5,7 +5,9 @@
         <title>LumosLearn</title>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="widgets.css">
-        
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        </style>
     </head>
     <body>
         
@@ -43,6 +45,8 @@
 
           <!--Pop-ups-->
           <!--INSTRUCTIONS FOR EVERYONE TO BUILD WIDGETS IN WIDGETSREAD.MD ON DISCORD-->
+
+          <!--filters for todolist-->
           <div id="todo" class="widget">
             <div class="widget-header">
               <span>To-Do</span>
@@ -59,13 +63,35 @@
               <!--https://www.flaticon.com/free-icons/miscellaneous" Miscellaneous icons created by Graphics Plazza - Flaticon</a>-->
             </div>
           </div>
+          <div id='pomodoro' class='widget'>
+            <div class="widget-header">
+              <span> Pomodoro </span>
+              <button class="close-widget"><img id='closeIcon' src="icons/minimize-sign.png" alt="minimize"></button>
+            </div>
+            <div class="pomodoro-widget-content">
+              <div class="pomodoro-content">
+                <div id="display-timer">
+                  <div id="pomodoro-timer" class="timer-display" data-duration="25.00">25:00</div>
+                  <div id="short-timer" class="timer-display" data-duration="5.00">5:00</div>
+                  <div id="long-timer" class="timer-display" data-duration="10.00">10:00</div>
+                  <button id="start-btn" class="pButton">Start</button>
+                </div>
+                <div id="button-container">
+                  <button id="pomodoro-btn" class="pButton">Pomodoro</button>
+                  <button id="shortbreak-btn" class="pButton">Short Break</button>
+                  <button id="longbreak-btn" class="pButton">Long Break</button>
+                  <button id="settings-btn"></button>
+                </div>
+              </div>
+          </div>
+
+          
 
           <!-- Upload Background Button-->
-           <div id="color-picker">
-            
-           </div>
+
         </div>
         <script src="main.js"></script>
         <script src="todoFunctions.js"></script>
+        <script src="pomodoroFns.js"></script> 
     </body>
 </html>

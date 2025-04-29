@@ -53,3 +53,6 @@ document.querySelectorAll('.widget').forEach(widget => {
         document.addEventListener('mouseup', mouseUpHandler);
     });
 });
+
+//temporary display pomodoro
+document.getElementById('pomodoro').style.display = 'block';
