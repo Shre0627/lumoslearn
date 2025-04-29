@@ -22,6 +22,7 @@ body {
 .widget-header {
     color:#fff;
     font-family: "Quicksand";
+    font-family: "Quicksand";
     font-weight: 600;
     user-select: none;
     font-size: 20px;
@@ -139,7 +140,6 @@ body {
     box-sizing: border-box;
 }
 
-
 #addTask{
     flex-shrink: 0;
     height: 30px;
@@ -169,14 +169,11 @@ body {
     box-sizing: border-box;
 }
 
-
 #addTicon {
     cursor: pointer;
     height: 20px;
     object-fit: contain;
 }
-
-
 
 #taskList{
     width: 100%;
@@ -215,6 +212,81 @@ body {
 #task:hover{
     background-color: #272323;
 }
+
+/* POMODORO WIDGET STYLING */
+#pomodoro{
+    resize: none;
+    width: max-content;
+    height: 190px;
+}
+.pomodoro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#display-timer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 10px;
+    margin-right: 25px;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+.timer-display {
+    color: white;
+    font-size: 50px;
+    font-family: "Quicksand";
+    font-weight: 600;
+    margin-top: 2.5%;
+}
+
+#start-btn {
+    height: max-content;
+    align-items: center;
+    margin-top: 7%;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#start-btn:hover {
+    background-color: #2a2929;
+    border-color:#1f1c1c
+}
+
+#button-container {
+    display: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.pButton {
+    font-family: "Quicksand";
+    background-color: rgb(19, 16, 16);
+    border-width: 0.2px;
+    color: white;
+    border-radius: 5px;
+    border-color: #ccc;
+    border-style: solid;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: absolute;
+}
+
+.pButton:hover {
+    background-color: #2a2929;
+    border-color:#1f1c1c;
+}
+
+
+
 
 /* Timer Widget */
 .timer-widget-content {
