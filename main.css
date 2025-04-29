@@ -1,5 +1,5 @@
 h1 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-family: "Quicksand";
 }
 
 /* Body */
@@ -38,7 +38,6 @@ nav {
 /* Navigation styling */
 .tabs {
     list-style-type: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-left: 2px;
     border-style: none;
 }
@@ -80,8 +79,8 @@ nav {
     color:black;
     text-align: center;
     font-size: 100px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-family: 'Quicksand';
+    font-weight: 600;
     line-height: 100px;
     z-index: -1; /* Send to back behind nav */
 }
