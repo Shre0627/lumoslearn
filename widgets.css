@@ -215,3 +215,38 @@ body {
     background-color: #272323;
 }
 
+/* Timer Widget */
+.timer-widget-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+/* Timer Display */
+.timer-display, p {
+    color: white;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+/* Timer Controls - Start, Stop, Edit Buttons */
+.timer-controls, img {
+    height: auto;
+    width: 30px; /* Set a fixed width for the buttons */
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    object-fit: contain;
+    cursor: pointer;
+    /**transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 10px; /* Space between buttons */
+    margin: auto;
+}
