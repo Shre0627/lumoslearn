@@ -232,16 +232,19 @@ body {
     height: auto;
     width: 30px; /* Set a fixed width for the buttons */
     flex-shrink: 0; /* Prevent the button from shrinking */
-    outline: none;
-    border: none;
-    border-radius: 50000px;
     object-fit: contain;
     cursor: pointer;
     /**transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
-.timer-controls img:hover {
-    background-color: #ccc;
+.timer-controls, button {
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+.timer-controls, button:hover {
+    background-color: #6c6a6a;
     transform: scale(1.1); /* Scale effect on hover */
 }
 

@@ -6,25 +6,24 @@ let timer = null;
 // Start button event listener
 function stopwatch() {
     seconds++;
-    if(seconds == 60) {
+    if(seconds === 60) {
         mintues++;
         seconds = 0;
-    } else if(minutes == 60) {
+    } else if(minutes === 60) {
         hours++;
         minutes = 0;
-    } else if(seconds < 10) {
+    } 
+    if(seconds < 10) {
         seconds = "0" + seconds;
     }
-
-    if(minutes < 10) {
+    if(minutes < 10 && minutes != 0) {
         minutes = "0" + minutes;
     }
-    if(hours < 10) {
+    if(hours < 10 && hours != 0) {
         hours = "0" + hours;
-    }
+    } 
 
     timerDisplay.innerHTML = hours + ":" + minutes + ":" + seconds;
-    setTimeout(stopwatch, 1000);
 }
 
 function watchStart() {
