@@ -64,11 +64,58 @@
             </div>
           </div>
 
+          <!-- Pomodoro Widget -->
+          <div id="pomodoro" class="widget">
+            <div class="widget-header">
+                <span> Pomodoro </span>
+                <button class="close-widget"><img id='closeIcon' src="icons/minimize-sign.png" alt="minimize"></button>
+            </div>
+            <div class="pomodoro-widget-content">
+                <div class="pomodoro-content">
+                    <div id="display-timer">
+                        <div id="pomodoro-timer" class="timer-display" data-duration="25.00">25:00</div>
+                        <div id="short-timer" class="timer-display" data-duration="5.00">5:00</div>
+                        <div id="long-timer" class="timer-display" data-duration="10.00">10:00</div>
+                        <button id="start-btn" class="pButton">Start</button>
+                    </div>
+                    <div id="button-container">
+                        <button id="pomodoro-btn" class="pButton">Pomodoro</button>
+                        <button id="shortbreak-btn" class="pButton">Short Break</button>
+                        <button id="longbreak-btn" class="pButton">Long Break</button>
+                        <button id="settings-btn"></button>
+                    </div>
+                </div>
+            </div>
+          </div> <!-- Properly close the pomodoro widget -->
+
+          <!-- Countdown Timer Widget -->
+          <div id="timer" class="widget">
+            <div class="widget-header">
+                <span>Timer</span>
+                <button class="close-widget"><img id='closeIcon' src="icons/minimize-sign.png" alt="minimize"></button>
+            </div>
+            <div class="countdown-widget-content">
+                <div id="timer-display">
+                    <p id="time">00:00:00</p>
+                </div>
+                <div id="timer-controls">
+                    <button id="start"><img id='startIcon' src="icons/play-button.png" onclick="watchStart()"></button>
+                    <button id="stop"><img id='stopIcon' src="icons/pause.png" onclick="watchStop()"></button>
+                    <button id="reset"><img id='resetIcon' src="icons/circular-arrow.png" onclick="watchReset()"></button>
+                </div>
+            </div>
+          </div> <!-- Properly close the timer widget -->
+
           <!-- Upload Background Button-->
 
+          <!-- Adding Dark Mode-->
+          <div id="dark-mode-toggle" class="dark-mode">
+            <button id="dark-mode-btn"><img id="dark-mode-icon" src="icons/night-mode.png"></button>
+          </div>
         </div>
         <script src="main.js"></script>
         <script src="todoFunctions.js"></script>
         <script src="pomodoroFns.js"></script> 
+        <script src="countdownFunctions.js"></script>
     </body>
 </html>

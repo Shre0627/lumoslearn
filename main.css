@@ -84,3 +84,18 @@ nav {
     line-height: 100px;
     z-index: -1; /* Send to back behind nav */
 }
+
+/* Dark Mode Icon */
+@media (prefers-color-scheme: dark) {
+   body {
+    background-color: black;
+    color: white;
+   }
+}
+
+.dark-mode-toggle {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

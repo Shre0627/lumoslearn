@@ -55,4 +55,15 @@ document.querySelectorAll('.widget').forEach(widget => {
 });
 
 //temporary display pomodoro
-document.getElementById('pomodoro').style.display = 'block';
+//document.getElementById('pomodoro').style.display = 'block';
+
+function darkMode() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+    let darkModeButton = document.getElementById("dark-mode-btn");
+    if (!element.classList.contains("dark-mode")) {
+        darkModeButton.innerHTML = "Light Mode";
+    } else {
+        darkModeButton.innerHTML = "Dark Mode";
+    }
+}
