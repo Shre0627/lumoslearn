@@ -32,7 +32,7 @@ This repository contains all the code for the LumosLearn Website which is a stud
   - `HTML` revision
 
 ## To make this project better, the next update (if it has one) will:
-  - 
+  - Desktop app availability
 
 ## ⬇️ Updates:
  - **version 1.0** - Webapp, host locally
