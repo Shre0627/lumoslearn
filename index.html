@@ -71,18 +71,54 @@
             <div class="pomodoro-widget-content">
               <div class="pomodoro-content">
                 <div id="display-timer">
-                  <div id="pomodoro-timer" class="timer-display" data-duration="25.00">25:00</div>
-                  <div id="short-timer" class="timer-display" data-duration="5.00">5:00</div>
-                  <div id="long-timer" class="timer-display" data-duration="10.00">10:00</div>
-                  <button id="start-btn" class="pButton">Start</button>
+                  <div id="pomodoro-timer" class="timer-display" data-duration="25.0">25:00</div>
+                  <div id="short-timer" class="timer-display" data-duration="5.0">5:00</div>
+                  <div id="long-timer" class="timer-display" data-duration="10.0">10:00</div>
+                  <div id="control-panel">
+                    <button id="start-btn" class="pButton">Start</button>
+                    <div>
+                      <button id="pause-btn"><img id="pom-pause" src="icons/pause-pom.png"></button>
+                      <button id="reset-btn" title="Reset current session"><img id="pom-reset" src="icons/icons8-reset-50.png"></button>
+                    </div>
+                  </div>
                 </div>
                 <div id="button-container">
                   <button id="pomodoro-btn" class="pButton">Pomodoro</button>
                   <button id="shortbreak-btn" class="pButton">Short Break</button>
                   <button id="longbreak-btn" class="pButton">Long Break</button>
-                  <button id="settings-btn"></button>
+                  <button id="settings-btn"><img id='settings-icon' src="icons/setting.png" alt="gear"></button>
+                  <!--https://icons8.com/icon/M0QUucppMdDa/gears Gears https://icons8.com-->
+                </div>
+                <div id="settings-area">
+                  <table id="settings-table">
+                    <tr>
+                      <th scope="row" colspan="2"><label for="pom-session-length">Pomodoro Session Length:</label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="number" min="0" max="60" id="pom-session-mins" placeholder="mins" value="25"></td>
+                      <td><input type="number" min="0" max="59" id="pom-session-secs" placeholder="secs" value="0"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><label for="short-session-length">Short Break Length:</label></tr>
+                    </tr>
+                    <tr>
+                      <td><input type="number" min="0" max="60" id="short-session-mins" placeholder="mins" value="5"></td>
+                      <td><input type="number" min="0" max="59" id="short-session-secs" placeholder="secs" value="0"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><label for="long-session-length">Long Break Length:</label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="number" min="0" max="60" id="long-session-mins" placeholder="mins" value="10"></td>
+                      <td><input type="number" min="0" max="59" id="long-session-secs" placeholder="secs" value="0"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><button id="save-settings" class="pButton">Save</button></th>
+                    </tr>
+                    </table>
                 </div>
               </div>
+            </div>
           </div>
 
           <!-- Upload Background Button-->

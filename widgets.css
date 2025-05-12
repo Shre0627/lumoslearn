@@ -216,14 +216,17 @@ body {
 #pomodoro{
     resize: none;
     width: max-content;
-    height: 190px;
+    height: fit-content;
+    max-height: max-content;
+    user-select: none;
 }
 .pomodoro-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+    padding-bottom: 10px;;
 }
 
 #display-timer {
@@ -244,6 +247,14 @@ body {
     margin-top: 2.5%;
 }
 
+#control-panel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
 #start-btn {
     height: max-content;
     align-items: center;
@@ -260,11 +271,43 @@ body {
     border-color:#1f1c1c
 }
 
+#reset-btn {
+    background-color: rgb(19, 16, 16);
+    border: none;
+}
+
+#pom-reset {
+    height: 25px;
+    width: 25px;
+    margin-bottom: 3px;;
+}
+
+#reset-btn :hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+#pause-btn {
+    background-color: rgb(19, 16, 16);
+    border: none;
+}
+
+#pause-btn :hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+#pom-pause {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
 #button-container {
     display: absolute;
     margin-left: 10px;
     margin-right: 10px;
-    
+    gap: 10px;
 }
 .pButton {
     font-family: "Quicksand";
@@ -282,4 +325,57 @@ body {
 .pButton:hover {
     background-color: #2a2929;
     border-color:#1f1c1c;
+}
+
+#settings-area {
+    margin-top: 10px;
+    color: white;
+    align-items: center;
+    font-family: "Quicksand"
+}
+#settings-table {
+    width: 100%;
+    table-layout: auto;
+    border-spacing: 0 10px;
+    font-family: "Quicksand";
+}
+
+#settings-table input {
+    width: 80%;
+    padding: 2px;
+    font-family: "Quicksand";
+    font-weight: bold;
+    font-size: 15px;
+    color: #ccc;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+#settings-table input:focus {
+    outline: none;
+    background-color: #484646;
+}
+#settings-btn {
+    background-color: rgb(19, 16, 16);
+    object-fit: contain;
+    width: max-content;
+    padding: 1px;
+    border: none;
+}
+
+#settings-icon {
+    height: 20px;
+    width: 20px;
+    margin-top: 2px;
+    margin-left:1px;
+}
+
+#settings-btn :hover {
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+#save-settings {
+    font-weight: bold;
 }

@@ -30,6 +30,7 @@ document.querySelectorAll('.close-widget').forEach(button => {
 });
 
 // Make widgets draggable
+// Make widgets draggable
 document.querySelectorAll('.widget').forEach(widget => {
     let header = widget.querySelector('.widget-header');
 
@@ -40,8 +41,25 @@ document.querySelectorAll('.widget').forEach(widget => {
         let offsetY = e.clientY - widget.offsetTop;
 
         function mouseMoveHandler(e) {
-            widget.style.left = `${e.clientX - offsetX}px`;
-            widget.style.top = `${e.clientY - offsetY}px`;
+            // Get the current position
+            let newX = e.clientX - offsetX;
+            let newY = e.clientY - offsetY;
+
+            // Get the window dimensions
+            let windowWidth = window.innerWidth;
+            let windowHeight = window.innerHeight;
+
+            // Set boundaries so widget doesn't leave the viewport
+            let widgetWidth = widget.offsetWidth;
+            let widgetHeight = widget.offsetHeight;
+
+            // Calculate the new positions, clamping them within the viewport
+            newX = Math.max(0, Math.min(newX, windowWidth - widgetWidth));
+            newY = Math.max(0, Math.min(newY, windowHeight - widgetHeight));
+
+            // Update widget position
+            widget.style.left = `${newX}px`;
+            widget.style.top = `${newY}px`;
         }
 
         function mouseUpHandler() {
@@ -55,4 +73,4 @@ document.querySelectorAll('.widget').forEach(widget => {
 });
 
 //temporary display pomodoro
-document.getElementById('pomodoro').style.display = 'block';
+//document.getElementById('pomodoro').style.display = 'block';
