@@ -25,6 +25,7 @@ nav {
     margin-top: 280px;
     padding: 2px;
     padding-bottom: 5px;
+    user-select: none;
 }
 
 /* Within the body */
