@@ -10,8 +10,6 @@
         </style>
     </head>
     <body>
-        
-
         <!--Nav Bar-->
         <nav>
             <table class="tabs">
@@ -37,7 +35,31 @@
             </table>
         </nav>
         
-        
+        <div id="side-menu" class="menu">
+          <button id="close-menu">&times</button>
+          <ul style="list-style-type: none;">
+            <li>
+              <h1>Dashboard</h1>
+            </li>
+            <li>
+              <h3>Theme</h3>
+            </li>
+            <li>
+              <button class="side-menu-icons" id="color-pick-btn" title="Theme Color"><img src="icons/icons8-paint-palette-100.png"></button>
+              <!--<a target="_blank" href="https://icons8.com/icon/Ry7zNa6MD6dX/paint-palette">Paint Palette</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+              <input type="color" id="bg-color-picker" style="display: none;">
+              <button class="side-menu-icons" id="theme-reset" title="Reset Theme"><img src="icons/icons8-reset-50.png"></button>
+            </li>
+            <li>
+              <h3>Sounds</h3>
+            </li>
+            <li>
+              <h3>Wallpaper</h3>
+            </li>
+          </ul>
+
+        </div>
+
         <div class="content">
           <!--Background Clock-->
           <div id="bg-clock"></div>
@@ -122,8 +144,10 @@
           </div>
 
           <!-- Upload Background Button-->
-          
+          <button id="dashboard-settings" title="Themes and Settings"><img src="/icons/setting.png"></button>
         </div>
+
+       
         <script src="main.js"></script>
         <script src="todoFunctions.js"></script>
         <script src="pomodoroFns.js"></script> 

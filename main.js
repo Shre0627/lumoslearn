@@ -74,3 +74,40 @@ document.querySelectorAll('.widget').forEach(widget => {
 
 //temporary display pomodoro
 //document.getElementById('pomodoro').style.display = 'block';
+
+//SID MENU
+const menu = document.getElementById('side-menu');
+const openMenu = document.getElementById('dashboard-settings');
+const closeMenu = document.getElementById('close-menu');
+
+openMenu.addEventListener('click', () => {
+    menu.style.width = '500px';
+});
+
+closeMenu.addEventListener('click', () => {
+    menu.style.width = '0';
+});
+//Change theme colors
+const colorPickerBtn = document.getElementById('color-pick-btn');
+const colorPicker = document.getElementById('bg-color-picker');
+
+colorPickerBtn.addEventListener('click', () => {
+    colorPicker.click();
+});
+
+colorPicker.addEventListener('input', (event) => {
+    const color = event.target.value;
+    document.documentElement.style.setProperty('--main-colors', color);
+    localStorage.setItem('theme-color', color);
+});
+
+// Load saved theme color from localStorage
+const savedColor = localStorage.getItem('theme-color');
+if (savedColor) {
+    document.documentElement.style.setProperty('--main-colors', savedColor);
+}
+const resetThemeBtn = document.getElementById('theme-reset');
+resetThemeBtn.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--main-colors', 'rgba(0, 0, 0, 0.89)');
+    localStorage.removeItem('theme-color');
+});

@@ -1,3 +1,8 @@
+@property --main-colors {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(0, 0, 0, 0.89);
+}
 h1 {
     font-family: "Quicksand";
 }
@@ -18,7 +23,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: var(--main-colors);
     width: 70px; 
     box-shadow: 1px 5px 8px;
     border-radius: 10px;
@@ -55,15 +60,13 @@ nav {
     color: black;
 }
 
-.tab button:hover {
-    cursor: pointer;
-}
 
 /* icons */
 .icons {
     width: 90%;
 }
 .icons:hover {
+    cursor: pointer;
     filter: invert(90%) sepia(100%) saturate(100%) hue-rotate(240deg) brightness(60%);
 }
 
@@ -84,4 +87,77 @@ nav {
     font-weight: 600;
     line-height: 100px;
     z-index: -1; /* Send to back behind nav */
+}
+
+#dashboard-settings {
+    user-select: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background-color: var(--main-colors);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+#dashboard-settings img {
+    width: 90%;
+}
+#dashboard-settings:hover{
+    cursor: pointer;
+    background-color: rgba(24, 24, 24, 0.89);
+}
+
+.menu {
+    user-select: none;
+    font-family: "Quicksand";
+    color: beige;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--main-colors);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu ul {
+    top: 0;
+    list-style-type: none;
+    padding: 20px;
+}
+
+#close-menu {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+#close-menu:hover {
+    cursor: pointer;
+}
+
+.side-menu-icons {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: rgb(25, 23, 23);
+    border: 0.1px solid rgb(195, 189, 189);
+    transition: border 0.8s ease;
+    border-radius: 10px;
+}
+.side-menu-icons img {
+    width: 100%;
+}
+.side-menu-icons:hover {
+    cursor: pointer;
+    background-color: rgba(24, 24, 24, 0.89);
+    border: none;
 }
