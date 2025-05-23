@@ -214,7 +214,7 @@ body {
 
 /* Timer Widget */
 .timer-widget-content {
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -240,6 +240,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     text-align: center;
+    gap: 10px;
 }
 
 /* Aligning Parent Container - needed so that the entire div is centered*/
@@ -262,10 +263,9 @@ body {
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-.timer-controls button:hover {
-    background-color: #ccc;
-    color: black;
-    opacity: 0.5;
+.timer-controls, button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
 }
 
 .stop {
