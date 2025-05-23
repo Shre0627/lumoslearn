@@ -6,24 +6,24 @@ let timer = null;
 // Start button event listener
 function stopwatch() {
     seconds++;
+     if(minutes === 0 && hours === 0) {
+        minutes = 0;
+        hours = 0;
+    }
     if(seconds === 60) {
-        mintues++;
+        minutes++;
         seconds = 0;
     } else if(minutes === 60) {
         hours++;
         minutes = 0;
     } 
-    if(seconds < 10) {
-        seconds = "0" + seconds;
-    }
-    if(minutes < 10 && minutes != 0) {
-        minutes = "0" + minutes;
-    }
-    if(hours < 10 && hours != 0) {
-        hours = "0" + hours;
-    } 
+   
+    let displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+    let displayMinutes = minutes < 10 ? "0" + minutes : minutes;
+    let displayHours = hours < 10 ? "0" + hours : hours;
 
-    timerDisplay.innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("time").textContent = displayHours + ":" + displayMinutes + ":" + displaySeconds; // Update the display time 
+    // .textContent is used to set the text content of the element (w/ out changing font)
 }
 
 function watchStart() {
@@ -40,5 +40,5 @@ function watchStop() {
 function watchReset() {
     clearInterval(timer); // Stop the timer
     [seconds, minutes, hours] = [0, 0, 0]; // Reset the time variables
-    timerDisplay.innerHTML = "00:00:00"; // Reset the display to 00:00:00
+    document.getElementById("time").textContent = "00:00:00"; // Reset the display to 00:00:00
 }

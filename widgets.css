@@ -220,32 +220,26 @@ body {
     gap: 5px;
 }
 /* Timer Display */
-.timer-display, p {
+#timer-display, p {
     color: white;
     font-size: 24px;
     font-family: 'Quicksand';
     font-weight: 600;
     text-align: center;
 }
-/* Timer Controls - Start, Stop, Edit Buttons */
-.timer-controls, img {
-    height: auto;
-    width: 30px; /* Set a fixed width for the buttons */
-    flex-shrink: 0; /* Prevent the button from shrinking */
-    object-fit: contain;
-    cursor: pointer;
-    /**transition: transform 0.3s ease; /* Smooth scaling effect */
-}
 
 .timer-controls, button {
-    outline: none;
-    border: none;
-    border-radius: 15px;
-}
-
-.timer-controls, button:hover {
-    background-color: #6c6a6a;
-    transform: scale(1.1); /* Scale effect on hover */
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    outline: none; /* Removes outline on focus */
+    border: 2px solid white; /* Button border color */
+    border-radius: 4px;
+    padding: 5px 10px; /* Button padding */
+    cursor: pointer; /* Changes cursor to hand symbol*/
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* Aligning Parent Container - needed so that the entire div is centered*/
@@ -266,6 +260,12 @@ body {
     gap: 10px; /* Space between buttons */
     margin: auto;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.timer-controls button:hover {
+    background-color: #ccc;
+    color: black;
+    opacity: 0.5;
 }
 
 .stop {
