@@ -19,13 +19,31 @@ currentTime();
 document.querySelectorAll('.open-widget').forEach(button => {
     button.addEventListener('click', function() {
         let targetId = this.getAttribute('data-target');
-        document.getElementById(targetId).style.display = 'block';
+        let widget = document.getElementById(targetId)
+        
+        widget.classList.add('hidden');
+        widget.style.display = 'block';
+        widget.classList.remove('fade-out'); //remove if present
+        
+        void widget.offsetWidth;
+
+        widget.classList.add('fade-in');
+        widget.classList.remove('hidden');
+        //remove fade in after transition to be reapplied next time
+        setTimeout(() => {
+            widget.classList.remove('fade-in');
+        }, 300);
     });
 });
 
 document.querySelectorAll('.close-widget').forEach(button => {
     button.addEventListener('click', function() {
-        this.closest('.widget').style.display = 'none';
+        const widget = this.closest('.widget')
+        widget.classList.add('fade-out');
+        setTimeout(() => {
+            widget.style.display = 'none';
+            widget.classList.remove('fade-out');
+        }, 300);
     });
 });
 

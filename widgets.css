@@ -17,6 +17,21 @@ body {
     max-height: 300px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.383); /* Slight shadow for depth */
     border-radius: 8px; /* Rounded corners */
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.widget.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.widget.fade-out {
+    opacity: 0;
+}
+
+.widget.fade-in {
+    opacity: 1;
 }
 
 .widget-header {
