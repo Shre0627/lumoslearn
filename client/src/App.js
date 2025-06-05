@@ -1,5 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import './components/BgClock';
+import './components/MenuPanel';
+import './components/SettingsButton';
+import './components/WidgetNav';
+import './components/WidgetWrapper';
+import './widgets/MusicWidget';
+import './widgets/NoteWidget';
+import './widgets/PomodoroWidget';
+import './widgets/TimerWidget';
+import './widgets/TodoWidget';
 
 function App() {
   return (
