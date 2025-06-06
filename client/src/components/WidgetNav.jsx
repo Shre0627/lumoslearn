@@ -17,7 +17,7 @@ const WidgetNav = ({ setActiveWidget }) => {
         <table className="tabs">
             <tbody>
                 {widgets.map(({ id, icon, alt}) => (
-                    <tr key="id">
+                    <tr key={id}>
                         <th className="tab">
                             <button 
                                 className="open-widget"

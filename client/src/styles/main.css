@@ -6,6 +6,19 @@
     initial-value: rgba(0, 0, 0, 0.89);
 }
 
+/* Main body */
+body {
+    background: linear-gradient(45deg, #08785c, #178e74, #8ce3dc, #ccf1f1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* Navigation style */
 nav {
     background-color: var(--main-colors);
