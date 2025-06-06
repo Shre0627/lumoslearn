@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@property --main-colors {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(0, 0, 0, 0.89);
+}
+
+/* Navigation style */
+nav {
+    background-color: var(--main-colors);
+    width: 70px; 
+    box-shadow: 1px 5px 8px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top: 280px;
+    padding: 2px;
+    padding-bottom: 5px;
+    user-select: none;
+}
+
+.tabs {
+    list-style-type: none;
+    padding-left: 2px;
+    border-style: none;
+}
+
+.tab button{
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    object-fit: contain;    
+    width: 85%;
+    border-style: none;
+    background-color: rgb(243, 239, 239);
+    color: black;
+}
+
+/* icons */
+.icons {
+    width: 90%;
+}
+.icons:hover {
+    cursor: pointer;
+    filter: invert(90%) sepia(100%) saturate(100%) hue-rotate(240deg) brightness(60%);
+}
+
+/* Background Clock Styling*/
+#bg-clock {
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw; /* Full Width*/
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    color:black;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Quicksand';
+    font-weight: 600;
+    line-height: 100px;
+    z-index: -1; /* Send to back behind nav */
+}
