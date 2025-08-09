@@ -11,7 +11,7 @@ const widgets = [
     {id: "todo", icon: todo, alt: "To-do"},
     {id: "music", icon: music, alt: "Music"},
 ];
-const WidgetNav = ({ setActiveWidget }) => {
+const WidgetNav = ({ openWidget }) => {
     return(
        <nav>
         <table className="tabs">
@@ -21,7 +21,7 @@ const WidgetNav = ({ setActiveWidget }) => {
                         <th className="tab">
                             <button 
                                 className="open-widget"
-                                onClick={() => setActiveWidget(id)}
+                                onClick={() => openWidget(id)}
                                 title={alt}
                             >
                                 <img className="icons" src={icon} alt={alt}/>
