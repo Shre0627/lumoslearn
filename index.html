@@ -10,34 +10,56 @@
         </style>
     </head>
     <body>
-        
-
         <!--Nav Bar-->
         <nav>
             <table class="tabs">
               <tr>
-                <th class="tab"><button class="open-widget" data-target="notes"><img class="icons" src="icons/sticky-note.png" alt="notes"></button></th>
+                <th class="tab"><button class="open-widget" data-target="notes" title="Notes"><img class="icons" src="icons/sticky-note.png" alt="notes"></button></th>
                 <!--<a href="https://www.flaticon.com/free-icons/sticky-note" title="sticky note icons">Sticky note icons created by inkubators - Flaticon</a>-->
               </tr>
               <tr>
-                <th class="tab"><button class="open-widget" data-target="timer"><img class= "icons" src="icons/stopwatch.png" alt="timer"></button></th>
+                <th class="tab"><button class="open-widget" data-target="timer" title="Countdown Timer"><img class= "icons" src="icons/stopwatch.png" alt="timer"></button></th>
               </tr>
               <tr>
-                <th class="tab"><button class="open-widget" data-target="pomodoro"><img class="icons" src="icons/pomodoro-technique.png"></button></th>
+                <th class="tab"><button class="open-widget" data-target="pomodoro" title="Pomodoro Timer"><img class="icons" src="icons/pomodoro-technique.png"></button></th>
                 <!--<a href="https://www.flaticon.com/free-icons/pomodoro" title="pomodoro icons">Pomodoro icons created by nangicon - Flaticon</a>-->
               </tr>
               <tr>
-                <th class="tab"><button  class="open-widget" data-target="todo"><img class="icons" src="icons/checklist.png"></button></th>
+                <th class="tab"><button  class="open-widget" data-target="todo" title="To-Do List"><img class="icons" src="icons/checklist.png"></button></th>
               </tr>
               <!--<a href="https://www.flaticon.com/free-icons/tasks" title="tasks icons">Tasks icons created by Graphics Plazza - Flaticon</a>-->
               <tr>
-                <th class="tab"><button class="open-widget" data-target="music"><img class="icons" src="icons/spotify.png" alt="spotify music"></button></th>
+                <th class="tab"><button class="open-widget" data-target="music" title="Spotify Music"><img class="icons" src="icons/spotify.png" alt="spotify music"></button></th>
                 <!--<a href="https://www.flaticon.com/free-icons/ios" title="ios icons">Ios icons created by Freepik - Flaticon</a>-->
               </tr>
             </table>
         </nav>
         
-        
+        <div id="side-menu" class="menu">
+          <button id="close-menu">&times</button>
+          <ul style="list-style-type: none;">
+            <li>
+              <h1>Dashboard</h1>
+            </li>
+            <li>
+              <h3>Theme</h3>
+            </li>
+            <li>
+              <button class="side-menu-icons" id="color-pick-btn" title="Theme Color"><img src="icons/icons8-paint-palette-100.png"></button>
+              <!--<a target="_blank" href="https://icons8.com/icon/Ry7zNa6MD6dX/paint-palette">Paint Palette</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+              <input type="color" id="bg-color-picker" style="display: none;">
+              <button class="side-menu-icons" id="theme-reset" title="Reset Theme"><img src="icons/icons8-reset-50.png"></button>
+            </li>
+            <li>
+              <h3>Sounds</h3>
+            </li>
+            <li>
+              <h3>Wallpaper</h3>
+            </li>
+          </ul>
+
+        </div>
+
         <div class="content">
           <!--Background Clock-->
           <div id="bg-clock"></div>
@@ -46,7 +68,7 @@
           <!--Pop-ups-->
           <!--INSTRUCTIONS FOR EVERYONE TO BUILD WIDGETS IN WIDGETSREAD.MD ON DISCORD-->
 
-          <!--filters for todolist-->
+          <!--todolist-->
           <div id="todo" class="widget">
             <div class="widget-header">
               <span>To-Do</span>
@@ -71,43 +93,63 @@
                 <button class="close-widget"><img id='closeIcon' src="icons/minimize-sign.png" alt="minimize"></button>
             </div>
             <div class="pomodoro-widget-content">
-                <div class="pomodoro-content">
-                    <div id="display-timer">
-                        <div id="pomodoro-timer" class="timer-display" data-duration="25.00">25:00</div>
-                        <div id="short-timer" class="timer-display" data-duration="5.00">5:00</div>
-                        <div id="long-timer" class="timer-display" data-duration="10.00">10:00</div>
-                        <button id="start-btn" class="pButton">Start</button>
+              <div class="pomodoro-content">
+                <div id="display-timer">
+                  <div id="pomodoro-timer" class="timer-display" data-duration="25.0">25:00</div>
+                  <div id="short-timer" class="timer-display" data-duration="5.0">5:00</div>
+                  <div id="long-timer" class="timer-display" data-duration="10.0">10:00</div>
+                  <div id="control-panel">
+                    <button id="start-btn" class="pButton">Start</button>
+                    <div>
+                      <button id="pause-btn"><img id="pom-pause" src="icons/pause-pom.png"></button>
+                      <button id="reset-btn" title="Reset current session"><img id="pom-reset" src="icons/icons8-reset-50.png"></button>
                     </div>
-                    <div id="button-container">
-                        <button id="pomodoro-btn" class="pButton">Pomodoro</button>
-                        <button id="shortbreak-btn" class="pButton">Short Break</button>
-                        <button id="longbreak-btn" class="pButton">Long Break</button>
-                        <button id="settings-btn"></button>
-                    </div>
+                  </div>
                 </div>
-            </div>
-          </div> <!-- Properly close the pomodoro widget -->
-
-          <!-- Countdown Timer Widget -->
-          <div id="timer" class="widget">
-            <div class="widget-header">
-                <span>Timer</span>
-                <button class="close-widget"><img id='closeIcon' src="icons/minimize-sign.png" alt="minimize"></button>
-            </div>
-            <div class="countdown-widget-content">
-                <div id="timer-display">
-                    <p id="time">00:00:00</p>
+                <div id="button-container">
+                  <button id="pomodoro-btn" class="pButton">Pomodoro</button>
+                  <button id="shortbreak-btn" class="pButton">Short Break</button>
+                  <button id="longbreak-btn" class="pButton">Long Break</button>
+                  <button id="settings-btn"><img id='settings-icon' src="icons/setting.png" alt="gear"></button>
+                  <!--https://icons8.com/icon/M0QUucppMdDa/gears Gears https://icons8.com-->
                 </div>
-                <div id="timer-controls">
-                    <button id="start" onclick="watchStart()">Start</button>
-                    <button id="stop" onclick="watchStop()">Stop</button>
-                    <button id="reset" onclick="watchReset()">Reset</button>
+                <div id="settings-area">
+                  <table id="settings-table">
+                    <tr>
+                      <th scope="row" colspan="2"><label for="pom-session-length">Pomodoro Session Length:</label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="number" min="0" max="60" id="pom-session-mins" placeholder="mins" value="25"></td>
+                      <td><input type="number" min="0" max="59" id="pom-session-secs" placeholder="secs" value="0"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><label for="short-session-length">Short Break Length:</label></tr>
+                    </tr>
+                    <tr>
+                      <td><input type="number" min="0" max="60" id="short-session-mins" placeholder="mins" value="5"></td>
+                      <td><input type="number" min="0" max="59" id="short-session-secs" placeholder="secs" value="0"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><label for="long-session-length">Long Break Length:</label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="number" min="0" max="60" id="long-session-mins" placeholder="mins" value="10"></td>
+                      <td><input type="number" min="0" max="59" id="long-session-secs" placeholder="secs" value="0"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><button id="save-settings" class="pButton">Save</button></th>
+                    </tr>
+                    </table>
                 </div>
+              </div>
             </div>
-          </div> <!-- Properly close the timer widget -->
+          </div>
 
           <!-- Upload Background Button-->
+          <button id="dashboard-settings" title="Themes and Settings"><img src="icons/setting.png"></button>
         </div>
+
+       
         <script src="main.js"></script>
         <script src="todoFunctions.js"></script>
         <script src="pomodoroFns.js"></script> 
