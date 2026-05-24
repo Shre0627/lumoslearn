@@ -74,7 +74,7 @@ function addTask() {
     //let complete = document.createElement('input');
     let del = document.createElement('button');
     let trashIcon = document.createElement('img');
-    trashIcon.src = 'icons/trash.png'; // Path to your trash icon
+    trashIcon.src = 'client/src/assets/trash.png'; // Path to your trash icon
     trashIcon.alt = 'Delete Task'; // Alt text for accessibility
     trashIcon.style.width = '16px'; // Set width of the icon
     trashIcon.style.height = '16px'; // Set height of the icon
